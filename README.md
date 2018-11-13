@@ -113,11 +113,12 @@ href="https://curriculum-content.s3.amazonaws.com/pfwtfp/pfwtp-refactoring-with-
 ![Bourdain](https://media.giphy.com/media/l1J3uKOu6ZhGPW7RK/giphy.gif)
 
 The great programmer Anthony Bourdain remarked that great mise-en-place chefs
-"work clean." They keep their station clean, their knives clean and at hand,
-they have a stack of service towels ready. They don't let distraction or
+"work clean." They keep their station clean; their knives sharp, clean and at hand;
+and their stack of clean service towels ready. They don't let distraction or
 clutter get in their station. Their minds need to be focused on the task at
 hand and if someone, someone's cell phone, someone else's mess is in their
-place...that problem will get solved.
+station &mdash; well Bourdain tells us that this conflict gets resolved
+_quickly_.
 
 In their feedback, The Master is suggesting here that this code is not "working
 clean." It passes the spec, sure, but it _hides_ some of what it's doing with
