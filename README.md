@@ -264,7 +264,7 @@ tested solutions for untangling complex code.
 [pols]: https://en.wikipedia.org/wiki/Principle_of_least_astonishment
 [diff1]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/458f57f91cd7461312407d0d558ef3f945110bf6?diff=unified
 [diff2]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/846bdc469d0fdf5ea48ad58b67718b1f63f195ec?diff=unified
-[diff3]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/846bdc469d0fdf5ea48ad58b67718b1f63f195ec?diff=unified
+[diff3]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/2854579d6556287864447298b5a4fed8b2013a53?diff=unified
 [diff4]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/2854579d6556287864447298b5a4fed8b2013a53?diff=unified
 [diff5]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/d13a32b5c809908a6e55ebf88eab4fade6edf9d0?diff=unified
 [diff6]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/ea0aa7f354580b7e6b11e12bce899232275637e9?diff=unified
