@@ -10,14 +10,14 @@
 The term "refactoring" was established by [Martin Fowler] who [defines it][def]
 thus:
 
->In my refactoring book, I gave a couple of definitions of refactoring.
+> In my refactoring book, I gave a couple of definitions of refactoring.
 >
->Refactoring (noun): a change made to the internal structure of software to make
->it easier to understand and cheaper to modify without changing its observable
->behavior.
+> Refactoring (noun): a change made to the internal structure of software to make
+> it easier to understand and cheaper to modify without changing its observable
+> behavior.
 >
->Refactoring (verb): to restructure software by applying a series of
->refactorings without changing its observable behavior.
+> Refactoring (verb): to restructure software by applying a series of
+> refactorings without changing its observable behavior.
 
 Fowler underscores a critical point: code can be done and work, but still be
 hard to understand and expensive (in time and money) to modify. The goal of
@@ -26,31 +26,39 @@ easier to understand and modify.
 
 The process of refactoring is:
 
-* Building or inheriting a test (this may be using a test framework or having a way to test
-  "does it work")
-* Passing a test
-* Changing the internals of the code _without breaking the test_
-  * No _new_ features are added
-  * Code might run faster, but more importantly it's easier to reason about
+- Building or inheriting a test: This may be using a test framework or having a
+  way to test "does this code work as it is written currently?"
+- Passing the test
+- Changing the internals of the code _without breaking the test_
+  - No _new_ features are added
+  - Code might run faster, but more importantly it's easier to reason about
 
 Learning to build tests that can be run quickly to verify function of your code
 is a career-long study for developers. For the purposes of this lesson, you'll
 inherit reasonably good tests for testing the application. You'll **also** be
-given a *working* solution (nice for a change!).  Through a series of code
+given a _working_ solution (nice for a change!). Through a series of code
 reviews you'll edit the code internals to be cleaner, simpler, and easier to
 read. In fact, you'll learn how to cut away _nearly half the code_ and still
 have it work!
 
 ### Modify Expressions and Statements While Maintaining Functionality
 
+The code provided in the `lib` folder currently passes all tests found in the
+`original_spec` folder. You can verify this by running
+`rspec original_spec --format d` in your terminal. However, to pass this lab,
+you must write code that passes all tests found in `spec`. The resulting code
+should pass all original and new tests, showing that functionality has not
+changed after refactoring.
+
 Your process should be the following:
 
-* Run `rspec original_spec`, verify the tests pass
-* Read the code review feedback (more on that below)
-* Try to implement the change; verify the tests pass
-* Compare your solution to ours
-* Make adjustments (if any)
-* Verify the tests pass
+- Run `rspec original_spec --format d` to verify the tests pass
+- Read the code review feedback (more on that below)
+- Try to implement the code changes in the corresponding `lib` file
+- Verify the tests are still passing
+- Compare your solution to ours
+- Make adjustments (if any)
+- Verify the tests are still passing
 
 ### Starting Code: `lib/luck_analyzer.rb`
 
@@ -74,8 +82,7 @@ and then call _that_ instead of re-running its implementation multiple times.
 Here's a [diff][diff1] that shows the change. The updated code looks
 like <a href="https://curriculum-content.s3.amazonaws.com/pfwtfp/pfwtp-refactoring-with-the-master-lab/2.pdf" target="_blank">the following</a>.
 
-> **Process Reminder**: Be sure to re-run the original specs (`rspec
-> original_spec`) and make sure they still run without error. This change,
+> **Process Reminder**: Be sure to re-run the original specs (`rspec original_spec --format d`) and make sure they still run without error. This change,
 > while it might seem small, reduced our code by 16 lines. That's 12% less code
 > to have a bug in it!
 
@@ -119,8 +126,8 @@ remember to be Mindful as we code.
 
 We should trim it down. This uses a few known refactorings:
 
-* Remove Temporary Variable
-* Remove Unused Code
+- Remove Temporary Variable
+- Remove Unused Code
 
 At the end, our implementation looks like:
 
@@ -211,7 +218,7 @@ _yin_, you should do the same thing, but slightly reversed for _yang_.
 
 ![Yin and Yang](https://media.giphy.com/media/FPjJbmGUVZmC92zO4c/giphy.gif)
 
-The strengthens a software design concept called
+This strengthens a software design concept called
 ["The Principle of Least Surprise."][pols] If I say "right" you expect there to
 be a "left." If I say there's a "bottom," then somewhere there ought be a
 "top." But how weird, or _surprising_ would it be if "left" and "right"
@@ -234,9 +241,9 @@ try to use the techniques we've seen in previous encounters to get a final,
 new, test to pass.
 
 Running `learn` will run a final spec that will encourage us to create a
-beautiful implementation. You can always run `rspec original_specs` to make
+beautiful implementation. You can always run `rspec original_spec` to make
 sure you didn't break things (this is why refactoring code with tests is so
-much easier!). When both `rspec original_specs` and `learn pass` you'll truly
+much easier!). When both `rspec original_spec` and `learn` pass you'll truly
 have understood the Master's teachings.
 
 ## Conclusion
@@ -250,11 +257,11 @@ tested solutions for untangling complex code.
 
 - [Refactoring (book)][book]
 
-[Martin Fowler]: https://martinfowler.com/
+[martin fowler]: https://martinfowler.com/
 [def]: https://martinfowler.com/bliki/DefinitionOfRefactoring.html
 [book]: https://martinfowler.com/books/refactoring.html
 [hashdoc]: https://ruby-doc.org/core-2.2.0/Hash.html
-[pols]: https://en.wikipedia.org/wiki/Principle_of_least_astonishment 
+[pols]: https://en.wikipedia.org/wiki/Principle_of_least_astonishment
 [diff1]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/458f57f91cd7461312407d0d558ef3f945110bf6?diff=unified
 [diff2]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/846bdc469d0fdf5ea48ad58b67718b1f63f195ec?diff=unified
 [diff3]: https://github.com/learn-co-curriculum/pfwtfp-dice-thrower-from-a-file/commit/846bdc469d0fdf5ea48ad58b67718b1f63f195ec?diff=unified
